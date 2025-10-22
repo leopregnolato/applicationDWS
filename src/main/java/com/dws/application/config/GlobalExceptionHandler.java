@@ -17,7 +17,6 @@ public class GlobalExceptionHandler {
 
         HttpStatus status = HttpStatus.NOT_FOUND;
 
-        // Cria a resposta customizada usando o DTO
         ResourcesException errorResponse = new ResourcesException(
                 status,
                 ex.getMessage(),
@@ -32,7 +31,6 @@ public class GlobalExceptionHandler {
             Exception ex,
             WebRequest request) {
 
-        // Logar a exceção completa aqui é CRUCIAL para debugging
         ex.printStackTrace();
 
         HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
